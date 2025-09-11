@@ -48,8 +48,10 @@ register_deactivation_hook( __FILE__, 'deactivate_wp_ppob_manager' );
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
+ *
+ * DIGANTI DARI 'require' menjadi 'require_once' UNTUK MENCEGAH REDECLARATION.
  */
-require WP_PPOB_MANAGER_PLUGIN_DIR . 'includes/class-wppob-loader.php';
+require_once WP_PPOB_MANAGER_PLUGIN_DIR . 'includes/class-wppob-loader.php';
 
 /**
  * Begins execution of the plugin.
