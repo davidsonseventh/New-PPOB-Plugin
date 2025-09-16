@@ -1,0 +1,182 @@
+/* --- General Wrapper --- */
+.wppob-wrap {
+    margin-top: 20px;
+}
+
+/* --- Dashboard Widgets --- */
+#wppob-dashboard-widgets-wrap .postbox-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+#wppob-dashboard-widgets-wrap .postbox .inside {
+    padding: 0 12px 12px;
+}
+#wppob-dashboard-widgets-wrap ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#wppob-dashboard-widgets-wrap li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+#wppob-dashboard-widgets-wrap li:last-child {
+    border-bottom: none;
+}
+#wppob-dashboard-widgets-wrap .button-secondary {
+    margin-top: 10px;
+}
+
+/* --- Status Badge for Tables --- */
+.wppob-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #95a5a6; /* default */
+}
+.wppob-status-badge.status-success { background-color: #27ae60; }
+.wppob-status-badge.status-processing { background-color: #f39c12; }
+.wppob-status-badge.status-pending { background-color: #3498db; }
+.wppob-status-badge.status-failed { background-color: #e74c3c; }
+.wppob-status-badge.status-refunded { background-color: #34495e; }
+
+/* --- User Management Page --- */
+#wppob-user-manager {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+#wppob-user-search-results {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+#wppob-user-search-results li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+#wppob-user-search-results li:hover {
+    background: #f0f0f1;
+}
+#wppob-user-search-results li:last-child {
+    border-bottom: none;
+}
+.wppob-col-right .form-group {
+    margin-bottom: 15px;
+}
+.wppob-col-right label {
+    display: block;
+    margin-bottom: 5px;
+}
+.wppob-col-right input[type="number"],
+.wppob-col-right input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+}
+.wppob-message-area-user .notice {
+    margin: 15px 0 0;
+}
+
+/* Styling untuk daftar produk checkbox */
+.wppob-product-checklist-wrapper {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+.wppob-product-checklist-wrapper label {
+    display: block;
+    padding: 4px 0;
+}
+
+/* Styling untuk kontainer checkbox produk */
+.wppob-product-checkbox-container {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: 250px;
+    overflow-y: auto;
+    padding: 5px 12px;
+}
+.wppob-product-checkbox-container div {
+    padding: 2px 0;
+}
+.wppob-product-checkbox-container label {
+    display: block;
+    cursor: pointer;
+}
+
+.wppob-sortable-list { list-style: none; margin: 0; padding: 0 0 0 20px; }
+.wppob-sortable-list li { margin: 5px 0; padding: 8px; background: #f9f9f9; border: 1px solid #e5e5e5; cursor: move; }
+.wppob-sortable-list li div { display: flex; justify-content: space-between; align-items: center; }
+.wppob-sortable-placeholder { height: 38px; border: 1px dashed #ccc; background: #f0f0f0; margin: 5px 0; }
+.wppob-edit-link { text-decoration: none; font-size: 11px; padding: 3px 8px; background: #e0e0e0; border-radius: 3px; }
+
+.wppob-toggle-children {
+    cursor: pointer;
+    color: #555;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.wppob-toggle-children:hover {
+    color: #0073aa;
+}
+
+/* Styling tambahan untuk tombol bulk edit images */
+#wppob-apply-bulk-image.button-primary:not(:disabled) {
+    background: #007cba;
+    border-color: #007cba;
+    color: #fff;
+    cursor: pointer;
+}
+#wppob-apply-bulk-image:disabled {
+    background: #f6f7f7 !important;
+    border-color: #dcdcde !important;
+    color: #a7aaad !important;
+    cursor: not-allowed !important;
+}
+
+
+/* Styling untuk Drag & Drop Produk */
+#wppob-sortable-products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#wppob-sortable-products li {
+    margin: 5px;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    cursor: move;
+    display: flex;
+    align-items: center;
+}
+
+#wppob-sortable-products .dashicons-move {
+    margin-right: 8px;
+    color: #555;
+}
+
+.wppob-sortable-placeholder {
+    height: 38px;
+    border: 1px dashed #ccc;
+    background: #f0f0f0;
+    margin: 5px;
+}

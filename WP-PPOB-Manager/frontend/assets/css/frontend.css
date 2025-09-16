@@ -1,0 +1,431 @@
+/* Styling Umum */
+.wppob-frontend-wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Grid Kategori */
+.wppob-category-grid {
+    display: grid !important; /* Paksa untuk menggunakan grid */
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.wppob-category-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    background-color: #fff;
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* Arah item dari atas ke bawah */
+    align-items: center; /* Pusatkan secara horizontal */
+    justify-content: center; /* Pusatkan secara vertikal */
+}
+.wppob-category-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+.wppob-category-item img {
+    max-width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+.wppob-category-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Grid Produk */
+.wppob-product-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.wppob-product-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.wppob-product-item.selected {
+    border-color: #0073aa;
+    box-shadow: 0 0 5px rgba(0, 115, 170, 0.5);
+}
+.wppob-product-item img {
+    max-width: 100%;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+.wppob-product-name { font-size: 13px; font-weight: bold; }
+.wppob-product-price { font-size: 12px; color: #555; }
+
+/* Daftar Produk */
+.wppob-product-list .wppob-product-item {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding: 15px;
+}
+.wppob-product-list .wppob-product-item img { margin-right: 15px; height: 40px; }
+.wppob-product-list .wppob-product-details { flex-grow: 1; }
+
+/* Form Pembelian */
+.wppob-purchase-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.wppob-form-group {
+    margin-bottom: 15px;
+}
+.wppob-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.wppob-form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Detail Pembelian & Tombol */
+#wppob-purchase-details {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+#wppob-purchase-details p { margin: 0 0 10px; }
+#wppob-purchase-details p:last-child { margin-bottom: 0; }
+
+#wppob-submit-purchase {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#wppob-submit-purchase:disabled {
+    background-color: #a0a5aa;
+    cursor: not-allowed;
+}
+#wppob-submit-purchase:hover:not(:disabled) {
+    background-color: #0085ba;
+}
+
+/* Area Notifikasi */
+#wppob-notification-area {
+    margin-top: 15px;
+}
+.wppob-notice {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.wppob-notice-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.wppob-notice-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* User Dashboard */
+.wppob-user-dashboard-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.wppob-user-dashboard-nav a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #0073aa;
+}
+.wppob-user-dashboard-nav a.active,
+.wppob-user-dashboard-nav a:hover {
+    background-color: #f0f0f1;
+}
+
+/* Topup Saldo */
+.wppob-payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+.wppob-payment-method {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.wppob-payment-method.selected {
+    border-color: #0073aa;
+    box-shadow: 0 0 5px rgba(0,115,170,0.5);
+}
+.wppob-payment-method img {
+    max-height: 40px;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+
+
+/* Tambahkan di akhir file frontend.css */
+.wppob-category-item img {
+    max-width: 70px; /* Atur lebar maksimal */
+    height: 70px; /* Atur tinggi */
+    object-fit: contain; /* Pastikan gambar tidak gepeng */
+    margin-bottom: 10px;
+}
+
+
+/* --- Styling untuk Notifikasi Login --- */
+.wppob-notice-error strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.wppob-notice-error p {
+    margin-top: 5px;
+    margin-bottom: 15px; /* Memberi jarak ke tombol */
+}
+
+.wppob-notice-error a.button,
+.wppob-notice-error .button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #0073aa;
+    color: #fff !important; /* Menjamin teks tombol putih */
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: none !important; /* Override style dari tema */
+    cursor: pointer;
+    text-shadow: none;
+    box-shadow: none;
+    line-height: normal; /* Memperbaiki tinggi tombol */
+    height: auto;
+}
+
+.wppob-notice-error a.button:hover,
+.wppob-notice-error .button:hover {
+    background-color: #0085ba;
+    color: #fff !important;
+}
+
+
+
+/* --- Styling untuk Dashboard Pengguna --- */
+.wppob-user-dashboard-nav {
+    display: flex;
+    gap: 0; /* Menghilangkan gap agar border menyatu */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+}
+
+.wppob-user-dashboard-nav a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-bottom: none; /* Menghapus border bawah default */
+    color: #0073aa;
+    margin-bottom: -1px; /* Trik agar border bawah menyatu dengan border container */
+    background-color: transparent;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.wppob-user-dashboard-nav a:hover {
+    background-color: #f0f0f1;
+}
+
+.wppob-user-dashboard-nav a.active {
+    background-color: #fff;
+    border-color: #ddd;
+    border-bottom: 1px solid #fff; /* Membuat tab terlihat menyatu dengan konten */
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- Styling untuk Form Top Up & Metode Pembayaran --- */
+.wppob-payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.wppob-payment-method {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+
+.wppob-payment-method.selected {
+    border-color: #0073aa;
+    box-shadow: 0 0 8px rgba(0, 115, 170, 0.4);
+}
+
+.wppob-payment-method:hover {
+    border-color: #999;
+}
+
+.wppob-payment-method span {
+    font-weight: 500;
+}
+
+
+/* --- Styling untuk Halaman Struk --- */
+.wppob-receipt-wrap {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: monospace;
+    background: #fff;
+}
+.wppob-receipt-header {
+    text-align: center;
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.wppob-receipt-header h2 {
+    margin: 0 0 5px;
+    font-size: 22px;
+}
+.wppob-receipt-header p {
+    margin: 0;
+    color: #555;
+}
+.wppob-receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.wppob-receipt-table td {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.wppob-receipt-table td:last-child {
+    text-align: right;
+}
+.wppob-receipt-sn {
+    text-align: center;
+}
+.wppob-receipt-sn .sn-title {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #555;
+}
+.wppob-receipt-sn .sn-content {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    margin-top: 5px;
+    word-break: break-all;
+}
+.wppob-receipt-footer {
+    text-align: center;
+}
+.wppob-receipt-footer td {
+    border-bottom: none;
+    padding-top: 20px;
+    color: #555;
+}
+.wppob-receipt-actions {
+    margin-top: 25px;
+    text-align: center;
+}
+.wppob-receipt-actions .button {
+    margin: 0 5px;
+}
+
+/* --- Aturan untuk Mencetak (Versi Ditingkatkan) --- */
+@media print {
+    /* Sembunyikan semua elemen di halaman secara default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Sembunyikan elemen umum dari tema secara paksa */
+    header, footer, nav, aside, .sidebar, .entry-header, .page-header, .site-header, .site-footer {
+        display: none !important;
+    }
+
+    /* Tampilkan hanya area struk dan semua isinya */
+    .wppob-receipt-wrap, .wppob-receipt-wrap * {
+        visibility: visible;
+    }
+    
+    /* Atur ulang posisi dan ukuran struk untuk pencetakan */
+    .wppob-receipt-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 5mm; /* Beri sedikit padding untuk kertas */
+        width: 100%; /* Lebar penuh relatif terhadap kertas */
+        max-width: 80mm; /* Atur lebar maksimal struk, cocok untuk printer thermal 80mm */
+        border: none;
+        box-shadow: none;
+        font-size: 10pt; /* Ukuran font yang lebih kecil untuk kertas kecil */
+        line-height: 1.4;
+        color: #000;
+    }
+
+    /* Sembunyikan tombol aksi saat mencetak */
+    .wppob-receipt-actions {
+        display: none;
+    }
+
+    /* Pastikan gambar (jika ada) tidak terlalu besar */
+    .wppob-receipt-wrap img {
+        max-width: 100%;
+    }
+
+    /* Atur ulang padding tabel agar lebih rapat */
+    .wppob-receipt-table td {
+        padding: 4px 0;
+    }
+
+    /* Atur ulang styling bagian SN/Token */
+    .wppob-receipt-sn .sn-content {
+        padding: 8px;
+        font-size: 12pt;
+    }
+}
