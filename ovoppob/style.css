@@ -1,0 +1,238 @@
+/*
+Theme Name: OVO PPOB Theme
+Theme URI: https://example.com/
+Author: Davidson Iglesias Rumondor
+Author URI: https://snackread.web.id/
+Description: Theme WordPress dengan tampilan modern seperti aplikasi PPOB, dirancang khusus untuk plugin WP PPOB Manager.
+Version: 1.1
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ovoppob
+*/
+
+/* --- Global & App Color Palette --- */
+:root {
+    --app-purple: #4E2C84;
+    --app-purple-light: #6D5D96;
+    --app-purple-dark: #371766;
+    --app-bg: #f3f4f8;
+    --text-color: #140A39;
+    --text-light: #6c757d;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--app-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* --- App Header --- */
+.app-header {
+    background: var(--app-purple);
+    background: linear-gradient(90deg, var(--app-purple) 0%, var(--app-purple-dark) 100%);
+    color: white;
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-branding {
+    display: flex;
+    align-items: center;
+}
+.site-logo {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--app-purple);
+    margin-right: 12px;
+}
+.site-info .site-name {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+    display: block;
+}
+.site-info .user-balance {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+.user-balance a { color: #fff; text-decoration: none; font-size: 14px; }
+
+.header-promo a {
+    background-color: rgba(255,255,255,0.15);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.header-promo a:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+.header-promo .fa-tags { margin-right: 5px; }
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+}
+.header-menu a {
+    color: white;
+    text-decoration: none;
+}
+.header-menu .icon-circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin: 0 auto 8px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.header-menu span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* --- Notification Banner --- */
+.notification-banner {
+    background-color: #fff;
+    padding: 12px 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 0 auto 15px auto;
+}
+.notification-banner .fa-bell {
+    color: var(--app-purple);
+    margin-right: 10px;
+}
+.notification-banner marquee {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- Promo Banner --- */
+.promo-banner {
+    background-color: var(--app-purple-dark);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.promo-info { display: flex; flex-direction: column; }
+.promo-title { font-weight: bold; font-size: 16px; }
+.promo-subtitle { font-size: 13px; opacity: 0.8; }
+.promo-link {
+    background: #fff;
+    color: var(--app-purple);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- WP PPOB Plugin Styling --- */
+.page-content-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.wppob-category-grid {
+    gap: 10px; /* Jarak antar ikon */
+}
+.wppob-category-item {
+    border: none;
+    box-shadow: none;
+    padding: 10px 5px;
+    background-color: transparent;
+    position: relative;
+}
+.wppob-category-item:hover {
+    transform: none;
+    box-shadow: none;
+}
+.wppob-category-item img {
+    max-width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 8px;
+    transition: transform 0.2s;
+}
+.wppob-category-item:hover img {
+    transform: scale(1.1);
+}
+.wppob-category-item span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+/* --- App Footer Navigation --- */
+.app-footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+    z-index: 1000;
+    border-top: 1px solid #f0f0f0;
+}
+.footer-nav-item {
+    text-align: center;
+    padding: 10px 5px;
+}
+.footer-nav-item a {
+    text-decoration: none;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.footer-nav-item .fa-solid { font-size: 20px; }
+.footer-nav-item span { font-size: 11px; font-weight: 500; }
+.footer-nav-item.active a {
+    color: var(--app-purple);
+}
+
+/* Hilangkan header WordPress admin bar di frontend */
+body.admin-bar {
+    margin-top: -32px !important;
+}
