@@ -1,0 +1,59 @@
+#wppob-login-form-container,
+#wppob-register-form-container,
+#wppob-otp-form-container,
+#wppob-pin-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #4E2C84;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group span {
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    color: #4E2C84;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.otp-inputs input {
+    width: 15%;
+    text-align: center;
+}
